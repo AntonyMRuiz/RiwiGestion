@@ -1,5 +1,6 @@
 package model;
 
+import controller.VacancyController;
 import database.CRUD;
 import database.ConfigDB;
 import entity.Coder;
@@ -114,6 +115,8 @@ public class ContractModel implements CRUD {
             if (result) {
                 JOptionPane.showMessageDialog(null, "Deleted Successfully Contract");
             }
+
+            VacancyController.instanceModel().updateStatus("Active", objContract.getVacancyId());
 
         } catch (SQLException e) {
             System.out.println("Error deleting Contract: " + e.getMessage() );

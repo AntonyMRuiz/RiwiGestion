@@ -29,7 +29,7 @@ public class ContractController {
             };
 
             vacancy.setStatus("Inactive");
-            VacancyController.instanceModel().updateStatus(vacancy);
+            VacancyController.instanceModel().updateStatus(vacancy.getStatus(),vacancy.getId());
             instanceModel().create(new Contract("Active", salary, vacancy.getId(), coder.getId(), vacancy, coder));
         }
 

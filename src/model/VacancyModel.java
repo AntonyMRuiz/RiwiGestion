@@ -128,16 +128,15 @@ public class VacancyModel implements CRUD {
         return result;
     }
 
-    public boolean updateStatus(Object obj) {
+    public boolean updateStatus(String status, int id) {
         Connection objConnection = ConfigDB.openConnection();
-        Vacancy objVacancy = (Vacancy) obj;
         boolean result = false;
 
         try {
             String slq = "UPDATE vacancy SET status = ? WHERE id = ?;";
             PreparedStatement pStatement = objConnection.prepareStatement(slq);
-            pStatement.setString(1, objVacancy.getStatus());
-            pStatement.setInt(2, objVacancy.getId());
+            pStatement.setString(1, status);
+            pStatement.setInt(2, id);
             result = pStatement.executeUpdate() > 0;
 
         } catch (SQLException e) {
