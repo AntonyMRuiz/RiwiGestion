@@ -169,6 +169,7 @@ public class ContractModel implements CRUD {
                 Contract objContract = new Contract();
 
                 objContract.setId(rs.getInt("contract.id"));
+                objContract.setApplicationDate("contract.applicationDate");
                 objContract.setStatus(rs.getString("contract.status"));
                 objContract.setSalary(rs.getDouble("contract.salary"));
                 objContract.setVacancyId(rs.getInt("contract.vacancyId"));
@@ -177,8 +178,10 @@ public class ContractModel implements CRUD {
                 Coder objCoder = new Coder();
                 objCoder.setId(rs.getInt("coder.id"));
                 objCoder.setName(rs.getString("coder.name"));
-                objContract.setVacancyId(rs.getInt("coder.vacancyId"));
-                objContract.setCoderId(rs.getInt("coder.coderId"));
+                objCoder.setLastName(rs.getString("coder.lastName"));
+                objCoder.setDocument(rs.getString("coder.document"));
+                objCoder.setCohorte(rs.getInt("coder.cohorte"));
+                objCoder.setCv(rs.getString("coder.cv"));
 
                 objContract.setCoder(objCoder);
 
