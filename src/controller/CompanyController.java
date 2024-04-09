@@ -1,55 +1,63 @@
 package controller;
 
+import entity.Company;
+import model.CompanyModel;
+import util.Utils;
+
 import javax.swing.*;
 import java.util.List;
 
 public class CompanyController {
     public static void create() {
-        String name = JOptionPane.showInputDialog("Enter name's store: ");
-        String address = JOptionPane.showInputDialog("Enter address's store: ");
+        String name = JOptionPane.showInputDialog("Enter name's company: ");
+        String sector = JOptionPane.showInputDialog("Enter Sector's company: ");
+        String location = JOptionPane.showInputDialog("Enter location's company: ");
+        String contact = JOptionPane.showInputDialog("Enter contact's company: ");
 
-        instanceModel().create(new Store(name, address));
+        instanceModel().create(new Company(name, sector, location, contact));
     }
 
     public static void delete() {
-        instanceModel().delete(Util.listToArray(instanceModel().findAll()));
+        instanceModel().delete(Utils.selectOption(instanceModel().findAll()));
     }
 
     public static void update() {
-        Store selectedStore = (Store) Util.listToArray(instanceModel().findAll());
+        Company selectedCompany = (Company) Utils.selectOption(instanceModel().findAll());
 
-        selectedStore.setName(JOptionPane.showInputDialog("Enter name's store: ", selectedStore.getName()));
-        selectedStore.setAddress(JOptionPane.showInputDialog("Enter address's store: ", selectedStore.getAddress()));
+        selectedCompany.setName(JOptionPane.showInputDialog("Enter name's company: ", selectedCompany.getName()));
+        selectedCompany.setSector(JOptionPane.showInputDialog("Enter sector's company: ", selectedCompany.getSector()));
+        selectedCompany.setLocation(JOptionPane.showInputDialog("Enter location's company: ", selectedCompany.getLocation()));
+        selectedCompany.setContact(JOptionPane.showInputDialog("Enter Contact",selectedCompany.getContact()));
 
-        instanceModel().update(selectedStore);
+        instanceModel().update(selectedCompany);
     }
 
     public static void showAll() {
-        String stores = "List of stores: \n";
+        String companys = "List of Company: \n";
 
         for (Object temp : instanceModel().findAll()) {
-            Store store = (Store) temp;
-            stores += store.toString() + "\n";
+            Company company = (Company) temp;
+            companys += company.toString() + "\n";
         }
 
-        JOptionPane.showMessageDialog(null, stores);
+        JOptionPane.showMessageDialog(null, companys);
     }
 
     public static void filter() {
-        String field = Util.listToArray(List.of(new String[]{"name", "location"}));
+        String field = Utils.selectOption(List.of(new String[]{"name", "location"}));
         List<Object> filter = instanceModel().getByField(field, JOptionPane.showInputDialog("Search: "));
 
-        String stores = "List of stores filter for " + field + " : \n";
+        String companys = "List of Company filter for " + field + " : \n";
 
         for (Object temp : filter) {
-            Store store = (Store) temp;
-            stores += store.toString() + "\n";
+            Company company = (Company) temp;
+            companys += company.toString() + "\n";
         }
 
-        JOptionPane.showMessageDialog(null, stores);
+        JOptionPane.showMessageDialog(null, companys);
     }
 
-    public static StoreModel instanceModel() {
-        return new StoreModel();
+    public static CompanyModel instanceModel() {
+        return new CompanyModel();
     }
 }

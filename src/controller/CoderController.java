@@ -13,11 +13,11 @@ public class CoderController {
         String lastName = JOptionPane.showInputDialog("Enter last name's coder: ");
         String document = JOptionPane.showInputDialog("Enter document's coder: ");
 
-        int cohort = Utils.selectOption(Cohorts.values());
+        int cohort = Integer.parseInt(JOptionPane.showInputDialog("Enter cohort: "));
 
         String cv = JOptionPane.showInputDialog("Enter cv (technology that the developer uses): ");
 
-        String clan = Utils.selectOption(Clans.values());
+        String clan = Utils.selectOption(List.of(new String[]{"Meta", "Lovelace"}));
 
         instanceModel().create(new Coder(name, lastName, document, clan, cv, cohort));
     }

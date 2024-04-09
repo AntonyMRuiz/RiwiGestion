@@ -1,65 +1,73 @@
 package controller;
 
+import entity.Company;
+import entity.Vacancy;
+import model.VacancyModel;
+import util.Utils;
+
 import javax.swing.*;
 import java.util.List;
 
 public class VacancyController {
     public static void create() {
-        String name = JOptionPane.showInputDialog("Enter name's Product: ");
-        Float price = Float.parseFloat(JOptionPane.showInputDialog("Enter price's Product: "));
-        int stock = Integer.parseInt(JOptionPane.showInputDialog("Enter stock's Product: "));
+        String title = JOptionPane.showInputDialog("Enter title's Vacancy: ");
+        String description = JOptionPane.showInputDialog("Enter description's Vacancy: ");
+        String duration = JOptionPane.showInputDialog("Enter duration's Vacancy: ");
 
-        Store id_Store = (Store) Util.listToArray(StoreController.instanceModel().findAll());
+        Company companyId = (Company) Utils.selectOption(CompanyController.instanceModel().findAll());
 
-        instanceModel().create(new Product(name, price, stock, id_Store.getId(), id_Store));
+        String technology = JOptionPane.showInputDialog("Enter technology's Vacancy: ");
+
+        instanceModel().create(new Vacancy(title, description, duration, "Active", technology, companyId.getId()));
     }
 
     public static void delete() {
-        instanceModel().delete(Util.listToArray(instanceModel().findAll()));
+        instanceModel().delete(Utils.selectOption(instanceModel().findAll()));
     }
 
     public static void update() {
-        Product selectedProduct = (Product) Util.listToArray(instanceModel().findAll());
+        Vacancy selectedVacancy = (Vacancy) Utils.selectOption(instanceModel().findAll());
 
-        selectedProduct.setName(JOptionPane.showInputDialog("Enter name's Product: ", selectedProduct.getName()));
-        selectedProduct.setPrice(Float.parseFloat(JOptionPane.showInputDialog("Enter price's Product: ", selectedProduct.getPrice())));
-        selectedProduct.setStock(Integer.parseInt(JOptionPane.showInputDialog("Enter stock's Product: ", selectedProduct.getStock())));
+        if (selectedVacancy.getStatus() == "Inactiva") {
+            JOptionPane.showMessageDialog(null, "You are not allowed to update the status of the vacancy.");
+            return;
+        }
 
-        selectedProduct.setId_Store(((Store) Util.listToArray(StoreController.instanceModel().findAll())).getId());
-        instanceModel().update(selectedProduct);
-    }
+        selectedVacancy.setTitle(JOptionPane.showInputDialog("Enter title's Vacancy: ", selectedVacancy.getTitle()));
+        selectedVacancy.setDescription(JOptionPane.showInputDialog("Enter description's Vacancy: ", selectedVacancy.getDescription()));
+        selectedVacancy.setDuration(JOptionPane.showInputDialog("Enter duration's Vacancy: ", selectedVacancy.getDuration()));
 
-    public static void updateStock(int stock, Product product) {
-        product.setStock(stock);
-        instanceModel().update(product);
+        selectedVacancy.setCompanyId(((Company) Utils.selectOption(CompanyController.instanceModel().findAll())).getId());
+
+        instanceModel().update(selectedVacancy);
     }
 
     public static void showAll() {
-        String products = "List of Products : \n";
+        String vacancys = "List of Products : \n";
 
         for (Object temp : instanceModel().findAll()) {
-            Product product = (Product) temp;
-            products += product.toString() + "\n";
+            Vacancy vacancy = (Vacancy) temp;
+            vacancys += vacancy.toString() + "\n";
         }
 
-        JOptionPane.showMessageDialog(null, products);
+        JOptionPane.showMessageDialog(null, vacancys);
     }
 
     public static void filter() {
-        String field = Util.listToArray(List.of(new String[]{"product.name", "product.price" ,"store.name", "store.locate"}));
+        String field = Utils.selectOption(List.of(new String[]{"product.name", "product.price" ,"store.name", "store.locate"}));
         List<Object> filter = instanceModel().getByField(field, JOptionPane.showInputDialog("Search: "));
 
-        String products = "List of Product filter for " + field + " : \n";
+        String vacancys = "List of Product filter for " + field + " : \n";
 
         for (Object temp : filter) {
-            Product product = (Product) temp;
-            products += product.toString() + "\n";
+            Vacancy vacancy = (Vacancy) temp;
+            vacancys += vacancy.toString() + "\n";
         }
 
-        JOptionPane.showMessageDialog(null, products);
+        JOptionPane.showMessageDialog(null, vacancys);
     }
 
-    public static ProductModel instanceModel() {
-        return new ProductModel();
+    public static VacancyModel instanceModel() {
+        return new VacancyModel();
     }
 }

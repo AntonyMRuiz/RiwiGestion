@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd916226-62ef-4972-97aa-ec0962e4f0ff" name="Changes" comment="" />
+    <list default="true" id="bd916226-62ef-4972-97aa-ec0962e4f0ff" name="Changes" comment="changes">
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/CoderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CoderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/CompanyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CompanyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ContractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ContractController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/VacancyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/VacancyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Contract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Utils.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="Enum" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -14,20 +34,47 @@
   "associatedIndex": 0
 }]]></component>
   <component name="ProjectId" id="2erTNe5k2TsA9ttqEjyRwDRKNc1" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "extract.method.default.visibility": "private",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/mricardo/Downloads/mysql-connector-j-8.3.0.jar",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "/home/mricardo/Documents/Antony RIWI/PruebaJDBC/untitled/src/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="riwiGestor" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="riwiGestor" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -44,20 +91,90 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1712661661796</updated>
-      <workItem from="1712661662879" duration="1000" />
+      <workItem from="1712661662879" duration="21504000" />
     </task>
+    <task id="LOCAL-00001" summary="FirstCommit">
+      <option name="closed" value="true" />
+      <created>1712661805978</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1712661805978</updated>
+    </task>
+    <task id="LOCAL-00002" summary="FirstCommit">
+      <option name="closed" value="true" />
+      <created>1712661992662</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712661992662</updated>
+    </task>
+    <task id="LOCAL-00003" summary="changes">
+      <option name="closed" value="true" />
+      <created>1712662034507</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1712662034508</updated>
+    </task>
+    <task id="LOCAL-00004" summary="changes">
+      <option name="closed" value="true" />
+      <created>1712664873337</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1712664873337</updated>
+    </task>
+    <task id="LOCAL-00005" summary="changes">
+      <option name="closed" value="true" />
+      <created>1712665967676</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1712665967676</updated>
+    </task>
+    <task id="LOCAL-00006" summary="changes">
+      <option name="closed" value="true" />
+      <created>1712666494178</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1712666494178</updated>
+    </task>
+    <task id="LOCAL-00007" summary="changes">
+      <option name="closed" value="true" />
+      <created>1712677193507</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1712677193507</updated>
+    </task>
+    <task id="LOCAL-00008" summary="changes">
+      <option name="closed" value="true" />
+      <created>1712680926097</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1712680926097</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="FirstCommit" />
+    <MESSAGE value="changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/src/model/VacancyModel.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

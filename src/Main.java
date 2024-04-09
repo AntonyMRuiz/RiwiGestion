@@ -227,5 +227,4 @@ public class Main {
         JOptionPane.showMessageDialog(null, "Thank you for using our application!");
     }
 
-    }
 }

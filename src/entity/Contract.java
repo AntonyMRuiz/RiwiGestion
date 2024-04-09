@@ -14,11 +14,13 @@ public class Contract {
     public Contract() {
     }
 
-    public Contract(String status, double salary, int vacancyId, int coderId) {
+    public Contract(String status, double salary, int vacancyId, int coderId, Vacancy vacancy, Coder coder) {
         this.status = status;
         this.salary = salary;
         this.vacancyId = vacancyId;
         this.coderId = coderId;
+        this.vacancy = vacancy;
+        this.coder = coder;
     }
 
     public int getId() {
