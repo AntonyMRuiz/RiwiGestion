@@ -59,10 +59,9 @@ public class Company {
 
     @Override
     public String toString() {
-        return "name: " + this.name +
-                ", sector='" + sector +
-                ", location='" + location +
-                ", contact='" + contact +
-                '}';
+        return  "| name: " + this.name + " |\n" +
+                "| sector: " + this.sector + " |\n" +
+                "| location: " + this.location + " |\n" +
+                "| contact: " + this.contact + " |\n \n";
     }
 }
