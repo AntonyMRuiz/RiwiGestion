@@ -29,8 +29,12 @@ public class CoderController {
     public static void update() {
         Coder selectedCoder = (Coder) Utils.selectOption(instanceModel().findAll());
 
-        selectedCoder.setName(JOptionPane.showInputDialog("Enter name's customer: ", selectedCoder.getName()));
-        selectedCoder.setLastName(JOptionPane.showInputDialog("Enter last name's customer: ", selectedCoder.getLastName()));
+        selectedCoder.setName(JOptionPane.showInputDialog("Enter name's coder: ", selectedCoder.getName()));
+        selectedCoder.setLastName(JOptionPane.showInputDialog("Enter last name's coder: ", selectedCoder.getLastName()));
+        selectedCoder.setDocument(JOptionPane.showInputDialog("Enter document's coder: ", selectedCoder.getDocument()));
+        selectedCoder.setClan(Utils.selectOption(List.of(new String[]{"Meta", "Lovelace"})));
+        selectedCoder.setCohorte(Integer.parseInt(JOptionPane.showInputDialog("Enter cohorte's coder: ", selectedCoder.getCohorte())));
+        selectedCoder.setCv(JOptionPane.showInputDialog("Enter cv: ", selectedCoder.getCv()));
 
         instanceModel().update(selectedCoder);
     }
@@ -47,7 +51,7 @@ public class CoderController {
     }
 
     public static void filter() {
-        String field = Utils.selectOption(List.of(new String[]{"name", "lastName", "email"}));
+        String field = Utils.selectOption(List.of(new String[]{"coder.name", "coder.lastName", "coder.document", "coder.cv", "coder.id", "coder.cohorte"}));
         List<Object> filter = instanceModel().getByField(field, JOptionPane.showInputDialog("Search: "));
 
         String coders = "List of Coder filter for " + field + " : \n";

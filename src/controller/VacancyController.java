@@ -54,7 +54,9 @@ public class VacancyController {
     }
 
     public static void filter() {
-        String field = Utils.selectOption(List.of(new String[]{"product.name", "product.price" ,"store.name", "store.locate"}));
+        String field = Utils.selectOption(List.of(new String[]{"company.name", "company.sector", "company.location", "company.contact",
+                "vacancy.title", "vacancy.description", "vacancy.duration", "vacancy.status", "vacancy.technology",
+                "vacancy.id", "company.id"}));
         List<Object> filter = instanceModel().getByField(field, JOptionPane.showInputDialog("Search: "));
 
         String vacancys = "List of Product filter for " + field + " : \n";

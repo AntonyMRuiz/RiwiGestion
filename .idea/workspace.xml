@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd916226-62ef-4972-97aa-ec0962e4f0ff" name="Changes" comment="changes">
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/CoderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CoderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/CompanyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CompanyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/ContractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ContractController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/VacancyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/VacancyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Contract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ContractModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ContractModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +90,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1712661661796</updated>
-      <workItem from="1712661662879" duration="21504000" />
+      <workItem from="1712661662879" duration="23207000" />
     </task>
     <task id="LOCAL-00001" summary="FirstCommit">
       <option name="closed" value="true" />
@@ -157,7 +156,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712680926097</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="changes">
+      <option name="closed" value="true" />
+      <created>1712684899025</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1712684899025</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

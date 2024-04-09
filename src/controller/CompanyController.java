@@ -44,7 +44,7 @@ public class CompanyController {
     }
 
     public static void filter() {
-        String field = Utils.selectOption(List.of(new String[]{"name", "location"}));
+        String field = Utils.selectOption(List.of(new String[]{"company.name", "company.sector", "company.location", "company.contact", "company.id"}));
         List<Object> filter = instanceModel().getByField(field, JOptionPane.showInputDialog("Search: "));
 
         String companys = "List of Company filter for " + field + " : \n";

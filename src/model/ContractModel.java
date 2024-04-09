@@ -138,16 +138,17 @@ public class ContractModel implements CRUD {
             PreparedStatement pStatement = objConnection.prepareStatement(sql);
 
             switch (field) {
-                case "product.name" , "store.locate", "store.name", "customer.name":
+                case "contract.applicationDate" , "contract.status", "company.name", "company.sector", "company.location", "company.contact",
+                     "vacancy.title", "vacancy.description", "vacancy.duration", "vacancy.status", "vacancy.technology":
                     pStatement.setString(1, search);
                     break;
 
-                case "product.id", "store.id", "product.stock":
+                case "vacancy.id", "coder.id", "contract.id":
                     pStatement.setInt(1, Integer.parseInt(search));
                     break;
 
-                case "product.price":
-                    pStatement.setFloat(1, Float.parseFloat(search));
+                case "contract.salary":
+                    pStatement.setDouble(1, Double.parseDouble(search));
                     break;
             }
 

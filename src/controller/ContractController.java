@@ -19,6 +19,7 @@ public class ContractController {
             return;
         } else {
             vacancy.setStatus("Inactive");
+            VacancyController.instanceModel().update(vacancy);
         }
 
         double salary = Double.parseDouble(JOptionPane.showInputDialog("Enter Salary: "));
