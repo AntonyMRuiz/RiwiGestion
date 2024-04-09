@@ -33,6 +33,10 @@ public class VacancyModel implements CRUD {
             pStatement.setInt(6, objVacancy.getCompanyId());
 
             result = pStatement.executeUpdate() > 0;
+            ResultSet rs = pStatement.getGeneratedKeys();
+            if (rs.next()) {
+                objVacancy.setId(rs.getInt("id"));
+            }
 
             if (result) {
                 JOptionPane.showMessageDialog(null, "Created Successfully Vacancy");
@@ -121,6 +125,28 @@ public class VacancyModel implements CRUD {
         }
 
         ConfigDB.closeConnection();
+        return result;
+    }
+
+    public boolean updateStatus(Object obj) {
+        Connection objConnection = ConfigDB.openConnection();
+        Vacancy objVacancy = (Vacancy) obj;
+        boolean result = false;
+
+        try {
+            String slq = "UPDATE vacancy SET status = ? WHERE id = ?;";
+            PreparedStatement pStatement = objConnection.prepareStatement(slq);
+            pStatement.setString(1, objVacancy.getStatus());
+            pStatement.setInt(2, objVacancy.getId());
+            result = pStatement.executeUpdate() > 0;
+
+            if (result) {
+                JOptionPane.showMessageDialog(null, "Updated Successfully Vacancy");
+            }
+        } catch (SQLException e) {
+            System.out.println("Error change status Vacancy: " + e.getMessage() );
+        }
+
         return result;
     }
 

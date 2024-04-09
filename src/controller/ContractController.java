@@ -8,25 +8,29 @@ import util.Utils;
 
 import javax.swing.*;
 import java.util.List;
+import java.util.Objects;
 
 public class ContractController {
     public static void create() {
 
         Vacancy vacancy = (Vacancy) Utils.selectOption(VacancyController.instanceModel().findAll());
 
-        if (vacancy.getStatus() == "Inactive") {
+        if (Objects.equals(vacancy.getStatus(), "Inactive")) {
             JOptionPane.showMessageDialog(null,"Not possible to create contract (Vacancy) because it is inactive)");
             return;
         } else {
             vacancy.setStatus("Inactive");
-            VacancyController.instanceModel().update(vacancy);
+            VacancyController.instanceModel().updateStatus(vacancy);
         }
 
         double salary = Double.parseDouble(JOptionPane.showInputDialog("Enter Salary: "));
 
         Coder coder = (Coder) Utils.selectOption(CoderController.instanceModel().findAll());
 
-        coder.getCv().contains(vacancy.getTechnology());
+        if (! coder.getCv().contains(vacancy.getTechnology())) {
+            JOptionPane.showMessageDialog(null,"Not possible to create contract (Coder) because coder don't have a technology");
+            return;
+        };
 
         instanceModel().create(new Contract("Active", salary, vacancy.getId(), coder.getId(), vacancy, coder));
     }

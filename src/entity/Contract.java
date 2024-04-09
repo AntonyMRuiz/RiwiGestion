@@ -91,10 +91,9 @@ public class Contract {
     public String toString() {
         return  "| vacancy: " + this.vacancy.getTitle() + " |\n" +
                 "| technology: " + this.vacancy.getTechnology() + " |\n" +
-                "| applicationDate: " + this.applicationDate + " |\n" +
                 "| status: " + this.status + " |\n" +
                 "| salary: " + this.salary + " |\n" +
                 "| coder: " + this.coder.getName() + " |\n" +
-                "| vacancy: " + this.coder.getCv() +" |\n \n";
+                "| DescriptionCoder: " + this.coder.getCv() +" |\n \n";
     }
 }

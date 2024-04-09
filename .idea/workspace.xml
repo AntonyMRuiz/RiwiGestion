@@ -6,11 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="bd916226-62ef-4972-97aa-ec0962e4f0ff" name="Changes" comment="changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/CoderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CoderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/CompanyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CompanyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/ContractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ContractController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/VacancyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/VacancyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Contract.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ContractModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ContractModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/VacancyModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/VacancyModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +89,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1712661661796</updated>
-      <workItem from="1712661662879" duration="23207000" />
+      <workItem from="1712661662879" duration="26245000" />
     </task>
     <task id="LOCAL-00001" summary="FirstCommit">
       <option name="closed" value="true" />
@@ -164,7 +163,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712684899025</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="changes">
+      <option name="closed" value="true" />
+      <created>1712686286070</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1712686286070</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,16 +181,5 @@
     <MESSAGE value="FirstCommit" />
     <MESSAGE value="changes" />
     <option name="LAST_COMMIT_MESSAGE" value="changes" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/model/VacancyModel.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

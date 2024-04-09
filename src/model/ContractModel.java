@@ -21,7 +21,7 @@ public class ContractModel implements CRUD {
 
         try {
             String slq = "INSERT INTO contract(status, salary, vacancyId, coderId) VALUES (?,?,?,?);";
-            PreparedStatement pStatement = objConnection.prepareStatement(slq);
+            PreparedStatement pStatement = objConnection.prepareStatement(slq, Statement.RETURN_GENERATED_KEYS);
 
             pStatement.setString(1, objContract.getStatus());
             pStatement.setDouble(2, objContract.getSalary());
