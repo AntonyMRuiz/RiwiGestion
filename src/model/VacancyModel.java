@@ -140,9 +140,6 @@ public class VacancyModel implements CRUD {
             pStatement.setInt(2, objVacancy.getId());
             result = pStatement.executeUpdate() > 0;
 
-            if (result) {
-                JOptionPane.showMessageDialog(null, "Updated Successfully Vacancy");
-            }
         } catch (SQLException e) {
             System.out.println("Error change status Vacancy: " + e.getMessage() );
         }

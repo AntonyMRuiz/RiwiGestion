@@ -19,20 +19,20 @@ public class ContractController {
             JOptionPane.showMessageDialog(null,"Not possible to create contract (Vacancy) because it is inactive)");
             return;
         } else {
+            double salary = Double.parseDouble(JOptionPane.showInputDialog("Enter Salary: "));
+
+            Coder coder = (Coder) Utils.selectOption(CoderController.instanceModel().findAll());
+
+            if (! coder.getCv().contains(vacancy.getTechnology())) {
+                JOptionPane.showMessageDialog(null,"Not possible to create contract (Coder) because coder don't have a technology");
+                return;
+            };
+
             vacancy.setStatus("Inactive");
             VacancyController.instanceModel().updateStatus(vacancy);
+            instanceModel().create(new Contract("Active", salary, vacancy.getId(), coder.getId(), vacancy, coder));
         }
 
-        double salary = Double.parseDouble(JOptionPane.showInputDialog("Enter Salary: "));
-
-        Coder coder = (Coder) Utils.selectOption(CoderController.instanceModel().findAll());
-
-        if (! coder.getCv().contains(vacancy.getTechnology())) {
-            JOptionPane.showMessageDialog(null,"Not possible to create contract (Coder) because coder don't have a technology");
-            return;
-        };
-
-        instanceModel().create(new Contract("Active", salary, vacancy.getId(), coder.getId(), vacancy, coder));
     }
 
     public static void delete() {
